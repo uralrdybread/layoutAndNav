@@ -31,36 +31,54 @@
         <!-- Two boxes on the bottom -->
         <div class="md:col-span-1 rounded-lg shadow-md">
           <div
-            class="relative h-96"
+            class="flex justify-center flex-col items-center relative h-96"
             style="
               background-image: url('/images/bgimg1.png');
               background-size: 100% auto;
             "
           >
             <h2
-              class="text-3xl font-bold"
+              class="text-4xl font-bold text-red-400 mb-7"
               style="font-family: 'Pacifico', sans-serif"
             >
-              Test
+              Pearl Perfect
             </h2>
-            <p>
-              "Welcome to our bubble tea paradise! Indulge in our handcrafted
+            <p class="text-center mb-3">
+              Welcome to our bubble tea paradise! Indulge in our handcrafted
               teas, bursting with flavor and freshness. From classic favorites
               to innovative blends, there's something for every taste. Join us
-              for a refreshing sip today!"
+              for a refreshing sip today!
             </p>
 
             <button
-              class="px-4 py-2 bg-red-300 hover:bg-red-400 text-white font-semibold rounded-full transition-colors duration-300 ease-in-out"
+              class="text-2xl absolute left-6 bottom-16 px-4 py-2 bg-red-300 hover:bg-red-400 text-white font-semibold rounded-full transition-colors duration-300 ease-in-out"
             >
               Order Now
             </button>
           </div>
           <p></p>
         </div>
-        <div class="md:col-span-1 bg-yellow-200 p-4 rounded-lg shadow-md">
-          <h2 class="text-xl font-semibold mb-2">Box 2</h2>
-          <p>This is box 2.</p>
+        <div
+          class="flex flex-col-reverse h-96 justify-center md:col-span-1 p-4 rounded-lg shadow-md"
+          style="
+            background-image: url('/images/bgimg2.png');
+            background-size: 100% auto;
+          "
+        >
+          <h2
+            class="text-3xl font-semibold mt-3 text-indigo-800"
+            style="font-family: 'Pacifico', sans-serif"
+          >
+            Favorites
+          </h2>
+          <div
+            class="bg-black bg-opacity-50 text-white bg-black bg-opacity-50 text-white border-4 border-purple-300 border-opacity-50 p-4 rounded-lg"
+          >
+            <p>
+              Discover our unique bubble tea blends and snacks. Treat yourself
+              to a taste adventure today!
+            </p>
+          </div>
         </div>
       </div>
     </div>
