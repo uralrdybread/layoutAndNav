@@ -8,9 +8,16 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Document</title>
   </head>
-  <body class="bg-purple-200">
+  <body class="bg-purple-200" style="font-family: 'Roboto', sans-serif">
     <!-- Begin main body -->
     <div class="container mx-auto py-8">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -22,15 +29,39 @@
           ></div>
         </div>
         <!-- Two boxes on the bottom -->
-        <div class="md:col-span-1 bg-green-200 p-4 rounded-lg shadow-md">
-          <h2 class="text-xl font-semibold mb-2">Box 1</h2>
-          <p>This is box 1.</p>
+        <div class="md:col-span-1 rounded-lg shadow-md">
+          <div
+            class="relative h-96"
+            style="
+              background-image: url('/images/bgimg1.png');
+              background-size: 100% auto;
+            "
+          >
+            <h2
+              class="text-3xl font-bold"
+              style="font-family: 'Pacifico', sans-serif"
+            >
+              Test
+            </h2>
+            <p>
+              "Welcome to our bubble tea paradise! Indulge in our handcrafted
+              teas, bursting with flavor and freshness. From classic favorites
+              to innovative blends, there's something for every taste. Join us
+              for a refreshing sip today!"
+            </p>
+
+            <button
+              class="px-4 py-2 bg-red-300 hover:bg-red-400 text-white font-semibold rounded-full transition-colors duration-300 ease-in-out"
+            >
+              Order Now
+            </button>
+          </div>
+          <p></p>
         </div>
         <div class="md:col-span-1 bg-yellow-200 p-4 rounded-lg shadow-md">
           <h2 class="text-xl font-semibold mb-2">Box 2</h2>
           <p>This is box 2.</p>
         </div>
-        <!-- End main body -->
       </div>
     </div>
   </body>
