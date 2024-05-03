@@ -2,7 +2,7 @@
 .menu-toggle {
   position: fixed;
   top: 20px;
-  left: 20px;
+  right: 20px; /* Changed from left to right */
   z-index: 1000;
 }
 
@@ -40,16 +40,17 @@
 .menu {
   position: fixed;
   top: 0;
-  left: -300px;
-  width: 250px;
+  right: -300px; /* Changed from left to right */
+  width: 200px;
   height: 100vh;
-  background-color: #fff;
-  transition: left 0.3s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.4); /* Adjust the opacity as needed */
+  backdrop-filter: blur(10px); /* Add blur effect */
+  transition: right 0.3s ease-in-out; /* Changed transition to right */
   z-index: 999;
 }
 
 .menu.open {
-  left: 0;
+  right: 0; /* Changed from left to right */
 }
 
 .menu ul {
@@ -60,7 +61,6 @@
 
 .menu ul li {
   padding: 15px 20px;
-  border-bottom: 1px solid #ddd;
 }
 
 .menu ul li a {
