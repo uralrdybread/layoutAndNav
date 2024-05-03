@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="myscripts.js"></script>
+    <link rel="stylesheet" href="css/mystyles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Idaho Refuge Center</title>
+  </head>
+  <body>
+    <nav class="bg-white shadow-md py-4 fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto">
+        <a href="#" class="text-black font-bold text-lg">Idaho Refuge Center</a>
+      </div>
+    </nav>
+
+    <div class="block sm:hidden">
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="menu-icon" id="menu-icon">
+          <div class="bird"></div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="menu" id="menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div
+      class="container mx-auto flex flex-col md:flex-row md:items-center mt-10"
+    >
+      <div class="w-full md:w-1/2 md:order-2">
+        <img src="/images/bluebirdhero.png" class="w-full" alt="Bluebird" />
+      </div>
+      <div class="w-full md:w-1/2 md:order-1">
+        <h1 class="text-3xl font-bold mb-4 text-center md:text-left">
+          Support Our Mission to Rescue and Rehabilitate Wildlife in Idaho.
+        </h1>
+        <p class="text-lg text-gray-600 mb-8 text-center md:text-left">
+          Make a Donation Today and Help Us Provide Care and Shelter to Idaho's
+          Wildlife.
+        </p>
+        <div class="text-center md:text-start">
+          <button
+            class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+          >
+            Make a Difference
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
