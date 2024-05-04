@@ -16,7 +16,7 @@
 .bird {
   width: 100%;
   height: 100%;
-  background-image: url("/images/bluebirdiconflying.png");
+  background-image: url("../images/bluebirdiconflying.png");
   background-size: cover;
   background-position: center;
   animation: fly 1s infinite alternate;
@@ -54,9 +54,9 @@
 }
 
 .menu ul {
+  margin: 60px 0; /* Add margin to push links down further */
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 .menu ul li {
@@ -66,4 +66,11 @@
 .menu ul li a {
   text-decoration: none;
   color: #333;
+  transition: color 0.3s ease; /* Add transition effect for smoother color change */
+  font-size: 16px; /* Set the default font size */
+  transition: font-size 0.3s ease; /* Add transition effect for smoother size change */
+}
+.menu ul li a:hover {
+  color: black; /* Change the color on hover */
+  font-size: 18px; /* Increase the font size on hover */
 }
