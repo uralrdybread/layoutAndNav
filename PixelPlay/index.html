@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
     <script src="myscripts.js"></script>
@@ -22,45 +24,88 @@
     <!-- Navbar -->
     <nav class="bg-teal-400 text-white py-4">
       <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo -->
         <div class="flex items-center">
-          <!-- Logo -->
-          <img src="images/logo.png" alt="Your Logo" class="h-12 mr-2" />
+          <img src="images/logo.png" alt="Your Logo" class="h-24 mr-2" />
         </div>
-        <div class="flex-grow text-center">
-          <!-- Navbar Links -->
-          <ul class="flex sm:justify-center space-x-6">
-            <li><a href="#" class="hover:text-gray-300">Link 1</a></li>
-            <li><a href="#" class="hover:text-gray-300">Link 2</a></li>
-            <li><a href="#" class="hover:text-gray-300">Link 3</a></li>
+
+        <div class="flex items-center">
+          <ul class="flex space-x-4">
+            <li>
+              <a href="#" class="hover:text-rose-300 sm:text-2xl text-sm"
+                ><i class="bi bi-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-rose-300 sm:text-2xl text-sm"
+                ><i class="bi bi-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-rose-300 sm:text-2xl text-sm"
+                ><i class="bi bi-twitter"></i
+              ></a>
+            </li>
+            <!-- Add more social media icons as needed -->
+          </ul>
+        </div>
+
+        <!-- Navbar Links -->
+        <div class="flex items-center justify-end flex-grow text-center">
+          <ul class="flex sm:justify-end space-x-6 sm:text-md text-base">
+            <li>
+              <a href="#" class="hover:text-rose-300"
+                ><i class="bi bi-house-fill"></i> Home</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-rose-300"
+                ><i class="bi bi-cart-fill"></i> Shop</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-rose-300"
+                ><i class="bi bi-info-circle-fill"></i> About Us</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-rose-300"
+                ><i class="bi bi-envelope-fill"></i> Contact</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-rose-300"
+                ><i class="bi bi-calendar-event-fill"></i> Events</a
+              >
+            </li>
             <!-- Add more links as needed -->
           </ul>
         </div>
-        <div>
-          <!-- Content on the far right -->
-        </div>
+
+        <!-- Social Media Icons -->
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-white py-20">
+    <section class="py-20">
       <div
         class="container mx-auto flex flex-col md:flex-row items-center justify-center"
       >
         <!-- Text/Content on the left -->
         <div class="md:w-1/2 md:mr-10">
           <h1 class="text-2xl font-bold mb-4">Level Up Your</h1>
-          <h1 class="text-3xl font-bold mb-4">Gaming Experience</h1>
+          <h1 class="text-3xl font-bold mb-4 font-start-2p">
+            Gaming Experience
+          </h1>
           <p class="text-lg mb-8">
             Explore a world of gaming excitement with our diverse collection of
             titles. From classics to the latest releases, find your next gaming
             adventure here. Join our community and level up your gaming
             experience today!
           </p>
-          <button
-            class="bg-blue-500 text-white font-semibold py-2 px-6 rounded hover:bg-blue-600"
-          >
-            Button
-          </button>
+          <div class="text-white">
+            <button class="">Sign Up Now</button>
+          </div>
         </div>
         <!-- Graphic on the right -->
         <div class="md:w-1/2">
@@ -71,43 +116,62 @@
     </section>
 
     <!-- News Articles Section -->
-    <section class="bg-gray-100 py-12">
+    <section
+      class="py-16 bg-cover"
+      style="background-image: url('images/background2.png')"
+    >
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-semibold mb-6">Latest Articles</h2>
+        <h2 class="text-3xl font-bold mb-6 text-center">Latest Articles</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <!-- Article 1 -->
-          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden border-4 border-teal-300"
+          >
             <img
               src="images/girlsplayingvg.png"
               alt="Article 1"
               class="w-full h-40 object-cover"
             />
             <div class="p-6">
-              <h3 class="text-lg font-semibold mb-2">Young women are breaking stereotypes and becoming avid gamers at local meet spot Pixel Play.</h3>
+              <h3 class="text-lg font-semibold mb-2">
+                Young women are breaking stereotypes and becoming avid gamers at
+                local meet spot Pixel Play.
+              </h3>
               <a href="#" class="text-blue-500 mt-2 inline-block">Read more</a>
             </div>
           </div>
           <!-- Article 2 -->
-          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden border-4 border-rose-300"
+          >
             <img
               src="images/gamestore.png"
               alt="Article 2"
               class="w-full h-40 object-cover"
             />
             <div class="p-6">
-              <h3 class="text-lg font-semibold mb-2">Local store Pixel Play and their wide selection of retro video games for sale and relive the nostalgia.</p></h3>
+              <h3 class="text-lg font-semibold mb-2">
+                Local store Pixel Play and their wide selection of retro video
+                games for sale and relive the nostalgia.
+              </h3>
               <a href="#" class="text-blue-500 mt-2 inline-block">Read more</a>
             </div>
           </div>
           <!-- Article 3 -->
-          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden border-4 border-teal-300"
+          >
             <img
               src="images/tournament.png"
               alt="Article 3"
               class="w-full h-40 object-cover"
             />
             <div class="p-6">
-              <h3 class="text-lg font-semibold mb-2">Pixel Play bringing in the crowds, check out the highlights from the recent fighting game tournament that attracted some of the best</h3>
+              <h3 class="text-lg font-semibold mb-2">
+                Pixel Play bringing in the crowds, check out the highlights from
+                the recent fighting game tournament that attracted some of the
+                best
+              </h3>
               <a href="#" class="text-blue-500 mt-2 inline-block">Read more</a>
             </div>
           </div>
@@ -124,16 +188,14 @@
 
         <!-- Middle content -->
         <div class="w-full md:w-1/2 px-4 py-8 md:py-0">
-          <h2 class="text-3xl font-bold mb-4">Tournament Sign-Up</h2>
+          <h2 class="text-2xl mb-4 font-start-2p">Tournament Sign-Up</h2>
           <p class="text-lg mb-4">
             Join our upcoming tournament and showcase your skills! Sign up now
             to compete against the best players and win exciting prizes.
           </p>
-          <button
-            class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
-          >
-            Sign Up Now
-          </button>
+          <div class="text-white text-center">
+            <button class="">Sign Up Now</button>
+          </div>
         </div>
 
         <!-- Right image -->
@@ -144,48 +206,49 @@
     </section>
 
     <!-- footer begins -->
-<footer class="bg-gray-800 text-gray-300 py-8">
-    <div class="container mx-auto flex flex-wrap justify-between">
+    <footer class="bg-rose-400 text-black py-8">
+      <div class="container mx-auto flex flex-wrap justify-between">
         <!-- Social Media Links -->
         <div class="w-full md:w-1/4 mb-4 md:mb-0">
-            <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
-            <ul class="flex space-x-4">
-                <li><a href="#" class="hover:text-white">Facebook</a></li>
-                <li><a href="#" class="hover:text-white">Twitter</a></li>
-                <li><a href="#" class="hover:text-white">Instagram</a></li>
-            </ul>
+          <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+          <ul class="flex space-x-4">
+            <li><a href="#" class="hover:text-white">Facebook</a></li>
+            <li><a href="#" class="hover:text-white">Twitter</a></li>
+            <li><a href="#" class="hover:text-white">Instagram</a></li>
+          </ul>
         </div>
-        
+
         <!-- Contact Information -->
         <div class="w-full md:w-1/4 mb-4 md:mb-0">
-            <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
-            <p>Email: info@example.com</p>
-            <p>Phone: +1234567890</p>
+          <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+          <p>Email: info@example.com</p>
+          <p>Phone: +1234567890</p>
         </div>
 
         <!-- Quick Links -->
         <div class="w-full md:w-1/4 mb-4 md:mb-0">
-            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul>
-                <li><a href="#" class="hover:text-white">Home</a></li>
-                <li><a href="#" class="hover:text-white">About Us</a></li>
-                <li><a href="#" class="hover:text-white">Services</a></li>
-                <li><a href="#" class="hover:text-white">Contact</a></li>
-            </ul>
+          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+          <ul>
+            <li><a href="#" class="hover:text-white">Home</a></li>
+            <li><a href="#" class="hover:text-white">About Us</a></li>
+            <li><a href="#" class="hover:text-white">Services</a></li>
+            <li><a href="#" class="hover:text-white">Contact</a></li>
+          </ul>
         </div>
-        
+
         <!-- Newsletter Signup -->
         <div class="w-full md:w-1/4">
-            <h3 class="text-lg font-semibold mb-4">Subscribe to Newsletter</h3>
-            <form class="flex flex-col">
-                <input type="email" placeholder="Enter your email" class="bg-gray-900 text-gray-300 rounded py-2 px-3 mb-2" />
-                <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Subscribe</button>
-            </form>
+          <h3 class="text-lg font-semibold mb-4">Subscribe to Newsletter</h3>
+          <form class="flex flex-col">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="bg-gray-900 text-gray-300 rounded py-2 px-3 mb-2"
+            />
+            <button class="">Sign Up Now</button>
+          </form>
         </div>
-    </div>
-</footer>
-
-    <!-- External JavaScript -->
-    <script src="scripts.js"></script>
+      </div>
+    </footer>
   </body>
 </html>
