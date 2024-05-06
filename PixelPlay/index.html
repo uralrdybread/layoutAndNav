@@ -93,7 +93,7 @@
             <div class="block sm:hidden">
               <div class="menu-toggle" onclick="toggleMenu()">
                 <div
-                  class="menu-icon w-12 h-12 relative cursor-pointer"
+                  class="menu-icon w-12 h-12 relative cursor-pointer mr-4"
                   id="menu-icon"
                 >
                   <!-- Hamburger icon -->
@@ -106,7 +106,7 @@
           </div>
         </div>
 
-        <nav class="menu border-l border-black-600" id="menu">
+        <nav class="menu border-2 border-blue-600" id="menu">
           <ul class="font-semibold my-16 list-none p-0 py-4 px-5">
             <li class="px-5 py-4">
               <a
@@ -188,22 +188,24 @@
           </div>
           <!-- Text/Content on the right (on mobile) -->
           <div class="md:w-1/2 md:order-1 md:ml-10">
-            <h1 class="text-2xl font-bold mb-4">Level Up Your</h1>
-            <h1 class="text-3xl font-bold mb-4 font-start-2p">
+            <h1 class="text-2xl font-bold mb-4 text-center sm:text-left">
+              Level Up Your
+            </h1>
+            <h1
+              class="text-3xl font-bold mb-4 font-start-2p text-center sm:text-left"
+            >
               Gaming Experience
             </h1>
-            <p class="text-lg md:text-xl lg:text-2xl mb-8 text-black">
+            <p
+              class="text-lg md:text-xl lg:text-2xl mb-8 text-black text-center sm:text-left"
+            >
               Explore a world of gaming excitement with our diverse collection
               of titles. From classics to the latest releases, find your next
               gaming adventure here. Join our community and level up your gaming
               experience today!
             </p>
-            <div class="text-center md:text-left">
-              <button
-                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
-              >
-                Sign Up Now
-              </button>
+            <div class="text-center md:text-left text-white font-bold text-lg">
+              <button class="">Sign Up Now</button>
             </div>
           </div>
         </div>
@@ -275,7 +277,7 @@
     </section>
 
     <!-- Tournament Sign-Up Section -->
-    <section class="py-12 md:py-16 bg-gray-300">
+    <section class="py-12 md:py-16 bg-white">
       <div class="container mx-auto px-4">
         <div
           class="flex flex-col md:flex-row items-center justify-center md:space-x-8"
@@ -315,14 +317,17 @@
       </div>
     </section>
 
-    <footer class="bg-rose-400 text-black py-8">
+    <!-- Footer start -->
+    <footer class="bg-rose-400 text-black py-8 text-center sm:text-left">
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap justify-between">
           <!-- Social Media Links -->
           <div class="w-full sm:w-1/2 md:w-1/4 mb-4 md:mb-0">
             <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
-            <ul class="flex space-x-4">
-              <li><a href="#" class="hover:text-white">Facebook</a></li>
+            <ul class="flex space-x-4 justify-center sm:justify-start">
+              <li>
+                <a href="#" class="hover:text-white">Facebook</a>
+              </li>
               <li><a href="#" class="hover:text-white">Twitter</a></li>
               <li><a href="#" class="hover:text-white">Instagram</a></li>
             </ul>
@@ -355,11 +360,14 @@
                 placeholder="Enter your email"
                 class="bg-gray-900 text-gray-300 rounded py-2 px-3 mb-2"
               />
-              <button
-                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
-              >
-                Sign Up Now
-              </button>
+              <div class="text-center">
+                <!-- Added text-center class here -->
+                <button
+                  class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+                >
+                  Sign Up Now
+                </button>
+              </div>
             </form>
           </div>
         </div>
