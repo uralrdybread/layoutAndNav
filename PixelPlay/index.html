@@ -22,14 +22,15 @@
   </head>
   <body style="font-family: 'Nunito', sans-serif" class="tracking-wide">
     <!-- Navbar -->
-    <nav class="bg-teal-400 text-white py-4">
+    <nav class="bg-teal-400 text-white py-4 w-full">
       <div class="container mx-auto flex justify-between items-center">
         <!-- Logo -->
         <div class="flex items-center">
           <img src="images/logo.png" alt="Your Logo" class="h-24 mr-2" />
         </div>
 
-        <div class="flex items-center">
+        <!-- Social media links -->
+        <div class="flex items-center hidden sm:block">
           <ul class="flex space-x-4">
             <li>
               <a href="#" class="hover:text-rose-300 sm:text-2xl text-sm"
@@ -51,8 +52,12 @@
         </div>
 
         <!-- Navbar Links -->
-        <div class="flex items-center justify-end flex-grow text-center">
-          <ul class="flex sm:justify-end space-x-6 sm:text-md text-base">
+        <div
+          class="flex items-center justify-end flex-grow text-center relative"
+        >
+          <ul
+            class="hidden md:flex sm:justify-end space-x-6 sm:text-md text-base"
+          >
             <li>
               <a href="#" class="hover:text-rose-300"
                 ><i class="bi bi-house-fill"></i> Home</a
@@ -80,44 +85,134 @@
             </li>
             <!-- Add more links as needed -->
           </ul>
-        </div>
 
-        <!-- Social Media Icons -->
-      </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="py-20">
-      <div
-        class="container mx-auto flex flex-col md:flex-row items-center justify-center"
-      >
-        <!-- Text/Content on the left -->
-        <div class="md:w-1/2 md:mr-10">
-          <h1 class="text-2xl font-bold mb-4">Level Up Your</h1>
-          <h1 class="text-3xl font-bold mb-4 font-start-2p">
-            Gaming Experience
-          </h1>
-          <p class="text-lg mb-8">
-            Explore a world of gaming excitement with our diverse collection of
-            titles. From classics to the latest releases, find your next gaming
-            adventure here. Join our community and level up your gaming
-            experience today!
-          </p>
-          <div class="text-white">
-            <button class="">Sign Up Now</button>
+          <!-- Hamburger menu -->
+          <div
+            class="flex items-center justify-between sm:justify-end sm:mr-6 z-50"
+          >
+            <div class="block sm:hidden">
+              <div class="menu-toggle" onclick="toggleMenu()">
+                <div
+                  class="menu-icon w-12 h-12 relative cursor-pointer"
+                  id="menu-icon"
+                >
+                  <!-- Hamburger icon -->
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- Graphic on the right -->
-        <div class="md:w-1/2">
-          <!-- Add your graphic here -->
-          <img src="images/hero.png" alt="Graphic" class="mx-auto md:w-full" />
+
+        <nav class="menu border-l border-black-600" id="menu">
+          <ul class="font-semibold my-16 list-none p-0 py-4 px-5">
+            <li class="px-5 py-4">
+              <a
+                href="#"
+                class="hover:text-rose-400 no-underline text-black text-base hover:text-lg"
+                ><i class="bi bi-house-fill"></i> Home</a
+              >
+            </li>
+            <li class="px-5 py-4">
+              <a
+                href="#"
+                class="hover:text-rose-400 no-underline text-black text-base hover:text-lg"
+                ><i class="bi bi-cart-fill"></i> Shop</a
+              >
+            </li>
+            <li class="px-5 py-4">
+              <a
+                href="#"
+                class="hover:text-rose-400 no-underline text-black text-base hover:text-lg"
+                ><i class="bi bi-info-circle-fill"></i> About Us</a
+              >
+            </li>
+            <li class="px-5 py-4">
+              <a
+                href="#"
+                class="hover:text-rose-400 no-underline text-black text-base hover:text-lg"
+                ><i class="bi bi-envelope-fill"></i> Contact</a
+              >
+            </li>
+            <li class="px-5 py-4">
+              <a
+                href="#"
+                class="hover:text-rose-400 no-underline text-black text-base hover:text-lg"
+                ><i class="bi bi-calendar-event-fill"></i> Events</a
+              >
+            </li>
+
+            <div class="flex flex-col items-center justify-center">
+              <li class="px-5 py-4">
+                <a
+                  href="#"
+                  class="hover:text-rose-400 text-2xl text-sm no-underline text-black transition-colors duration-300 hover:text-base"
+                  ><i class="bi bi-facebook text-2xl"></i
+                ></a>
+              </li>
+              <li class="px-5 py-4">
+                <a
+                  href="#"
+                  class="hover:text-rose-400 text-2xl text-sm no-underline text-black transition-colors duration-300 text-base hover:text-base"
+                  ><i class="bi bi-instagram text-2xl"></i
+                ></a>
+              </li>
+              <li class="px-5 py-4">
+                <a
+                  href="#"
+                  class="hover:text-rose-400 text-2xl text-md no-underline text-black transition-colors duration-300 text-base hover:text-base"
+                  ><i class="bi bi-twitter text-2xl"></i
+                ></a>
+              </li>
+            </div>
+          </ul>
+        </nav>
+      </div>
+    </nav>
+    <!-- End hamburger menu -->
+
+    <!-- Hero Section -->
+    <section class="py-12 md:py-20 bg-gray-white">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center justify-center">
+          <!-- Graphic on the left (on mobile) -->
+          <div class="md:w-1/2 md:order-2">
+            <!-- Add your graphic here -->
+            <img
+              src="images/hero.png"
+              alt="Graphic"
+              class="mx-auto md:w-full"
+            />
+          </div>
+          <!-- Text/Content on the right (on mobile) -->
+          <div class="md:w-1/2 md:order-1 md:ml-10">
+            <h1 class="text-2xl font-bold mb-4">Level Up Your</h1>
+            <h1 class="text-3xl font-bold mb-4 font-start-2p">
+              Gaming Experience
+            </h1>
+            <p class="text-lg md:text-xl lg:text-2xl mb-8 text-black">
+              Explore a world of gaming excitement with our diverse collection
+              of titles. From classics to the latest releases, find your next
+              gaming adventure here. Join our community and level up your gaming
+              experience today!
+            </p>
+            <div class="text-center md:text-left">
+              <button
+                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+              >
+                Sign Up Now
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- News Articles Section -->
     <section
-      class="py-16 bg-cover"
+      class="py-12 md:py-16 bg-cover bg-gray-200"
       style="background-image: url('images/background2.png')"
     >
       <div class="container mx-auto px-4">
@@ -170,7 +265,7 @@
               <h3 class="text-lg font-semibold mb-2">
                 Pixel Play bringing in the crowds, check out the highlights from
                 the recent fighting game tournament that attracted some of the
-                best
+                best.
               </h3>
               <a href="#" class="text-blue-500 mt-2 inline-block">Read more</a>
             </div>
@@ -179,76 +274,98 @@
       </div>
     </section>
 
-    <section>
-      <div class="flex flex-wrap justify-center items-center mt-16">
-        <!-- Left image -->
-        <div class="w-full md:w-1/4 px-4">
-          <img src="images/cabinet.png" alt="Left Image" class="w-full" />
-        </div>
-
-        <!-- Middle content -->
-        <div class="w-full md:w-1/2 px-4 py-8 md:py-0">
-          <h2 class="text-2xl mb-4 font-start-2p">Tournament Sign-Up</h2>
-          <p class="text-lg mb-4">
-            Join our upcoming tournament and showcase your skills! Sign up now
-            to compete against the best players and win exciting prizes.
-          </p>
-          <div class="text-white text-center">
-            <button class="">Sign Up Now</button>
+    <!-- Tournament Sign-Up Section -->
+    <section class="py-12 md:py-16 bg-gray-300">
+      <div class="container mx-auto px-4">
+        <div
+          class="flex flex-col md:flex-row items-center justify-center md:space-x-8"
+        >
+          <!-- Left image -->
+          <div class="w-full md:w-1/4 mb-4 md:mb-0">
+            <img src="images/cabinet.png" alt="Left Image" class="w-full" />
           </div>
-        </div>
-
-        <!-- Right image -->
-        <div class="w-full md:w-1/4 px-4">
-          <img src="images/pscontroller.png" alt="Right Image" class="w-full" />
+          <!-- Middle content -->
+          <div class="w-full md:w-1/2">
+            <h2
+              class="text-2xl md:text-3xl font-bold mb-4 text-center md:text-left"
+            >
+              Tournament Sign-Up
+            </h2>
+            <p class="text-lg mb-4 text-center md:text-left">
+              Join our upcoming tournament and showcase your skills! Sign up now
+              to compete against the best players and win exciting prizes.
+            </p>
+            <div class="text-center md:text-left">
+              <button
+                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+              >
+                Sign Up Now
+              </button>
+            </div>
+          </div>
+          <!-- Right image -->
+          <div class="w-full md:w-1/4">
+            <img
+              src="images/pscontroller.png"
+              alt="Right Image"
+              class="w-full"
+            />
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- footer begins -->
     <footer class="bg-rose-400 text-black py-8">
-      <div class="container mx-auto flex flex-wrap justify-between">
-        <!-- Social Media Links -->
-        <div class="w-full md:w-1/4 mb-4 md:mb-0">
-          <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
-          <ul class="flex space-x-4">
-            <li><a href="#" class="hover:text-white">Facebook</a></li>
-            <li><a href="#" class="hover:text-white">Twitter</a></li>
-            <li><a href="#" class="hover:text-white">Instagram</a></li>
-          </ul>
-        </div>
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-between">
+          <!-- Social Media Links -->
+          <div class="w-full sm:w-1/2 md:w-1/4 mb-4 md:mb-0">
+            <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+            <ul class="flex space-x-4">
+              <li><a href="#" class="hover:text-white">Facebook</a></li>
+              <li><a href="#" class="hover:text-white">Twitter</a></li>
+              <li><a href="#" class="hover:text-white">Instagram</a></li>
+            </ul>
+          </div>
 
-        <!-- Contact Information -->
-        <div class="w-full md:w-1/4 mb-4 md:mb-0">
-          <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
-          <p>Email: info@example.com</p>
-          <p>Phone: +1234567890</p>
-        </div>
+          <!-- Contact Information -->
+          <div class="w-full sm:w-1/2 md:w-1/4 mb-4 md:mb-0">
+            <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+            <p>Email: info@example.com</p>
+            <p>Phone: +1234567890</p>
+          </div>
 
-        <!-- Quick Links -->
-        <div class="w-full md:w-1/4 mb-4 md:mb-0">
-          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-          <ul>
-            <li><a href="#" class="hover:text-white">Home</a></li>
-            <li><a href="#" class="hover:text-white">About Us</a></li>
-            <li><a href="#" class="hover:text-white">Services</a></li>
-            <li><a href="#" class="hover:text-white">Contact</a></li>
-          </ul>
-        </div>
+          <!-- Quick Links -->
+          <div class="w-full sm:w-1/2 md:w-1/4 mb-4 md:mb-0">
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul>
+              <li><a href="#" class="hover:text-white">Home</a></li>
+              <li><a href="#" class="hover:text-white">About Us</a></li>
+              <li><a href="#" class="hover:text-white">Services</a></li>
+              <li><a href="#" class="hover:text-white">Contact</a></li>
+            </ul>
+          </div>
 
-        <!-- Newsletter Signup -->
-        <div class="w-full md:w-1/4">
-          <h3 class="text-lg font-semibold mb-4">Subscribe to Newsletter</h3>
-          <form class="flex flex-col">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              class="bg-gray-900 text-gray-300 rounded py-2 px-3 mb-2"
-            />
-            <button class="">Sign Up Now</button>
-          </form>
+          <!-- Newsletter Signup -->
+          <div class="w-full sm:w-1/2 md:w-1/4">
+            <h3 class="text-lg font-semibold mb-4">Subscribe to Newsletter</h3>
+            <form class="flex flex-col">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="bg-gray-900 text-gray-300 rounded py-2 px-3 mb-2"
+              />
+              <button
+                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+              >
+                Sign Up Now
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </footer>
+
+    <script src="myscripts.js"></script>
   </body>
 </html>
