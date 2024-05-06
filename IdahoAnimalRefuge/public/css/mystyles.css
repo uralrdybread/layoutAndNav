@@ -1,0 +1,76 @@
+/* Hamburger Menu Icon Styles */
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px; /* Changed from left to right */
+  z-index: 1000;
+}
+
+.menu-icon {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  cursor: pointer;
+}
+
+.bird {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/bluebirdiconflying.png");
+  background-size: cover;
+  background-position: center;
+  animation: fly 1s infinite alternate;
+  background-color: blue; /* Change this color to the desired color */
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.menu.open .bird {
+  animation-play-state: paused;
+}
+
+/* Menu Styles */
+.menu {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Changed from left to right */
+  width: 200px;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.4); /* Adjust the opacity as needed */
+  backdrop-filter: blur(10px); /* Add blur effect */
+  transition: right 0.3s ease-in-out; /* Changed transition to right */
+  z-index: 999;
+}
+
+.menu.open {
+  right: 0; /* Changed from left to right */
+}
+
+.menu ul {
+  margin: 60px 0; /* Add margin to push links down further */
+  list-style: none;
+  padding: 0;
+}
+
+.menu ul li {
+  padding: 15px 20px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease; /* Add transition effect for smoother color change */
+  font-size: 16px; /* Set the default font size */
+  transition: font-size 0.3s ease; /* Add transition effect for smoother size change */
+}
+.menu ul li a:hover {
+  color: black; /* Change the color on hover */
+  font-size: 18px; /* Increase the font size on hover */
+}

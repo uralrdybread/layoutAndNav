@@ -7,3 +7,7 @@ PixelPlay is your ultimate destination for all things gaming. From the latest ne
 ## Visit PixelPlay
 
 To experience the gaming excitement firsthand, visit [PixelPlay](https://pixelplay-8f4b8.web.app/).
+
+## Visit the Idaho Animal Refuge
+
+To learn more about our mission and help Idaho's wildlife, visit the [Idaho Animal Refuge](https://idahoanimalrefuge.web.app/).
